@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BE759D5B24573A4700A6120C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE759D5A24573A4700A6120C /* AppDelegate.swift */; };
 		BE759D5D24573A4700A6120C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE759D5C24573A4700A6120C /* SceneDelegate.swift */; };
-		BE759D5F24573A4700A6120C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE759D5E24573A4700A6120C /* ViewController.swift */; };
 		BE759D6224573A4700A6120C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE759D6024573A4700A6120C /* Main.storyboard */; };
 		BE759D6424573A4900A6120C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE759D6324573A4900A6120C /* Assets.xcassets */; };
 		BE759D6724573A4900A6120C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE759D6524573A4900A6120C /* LaunchScreen.storyboard */; };
@@ -39,7 +38,6 @@
 		BE759D5724573A4700A6120C /* Calorie Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calorie Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE759D5A24573A4700A6120C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE759D5C24573A4700A6120C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE759D5E24573A4700A6120C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		BE759D6124573A4700A6120C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE759D6324573A4900A6120C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE759D6624573A4900A6120C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 		BE759D8D2457404A00A6120C /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				BE759D5E24573A4700A6120C /* ViewController.swift */,
 				BE759D6024573A4700A6120C /* Main.storyboard */,
 			);
 			path = presentation;
@@ -295,7 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE759D8F2457407E00A6120C /* Meal.swift in Sources */,
-				BE759D5F24573A4700A6120C /* ViewController.swift in Sources */,
 				BE759D5B24573A4700A6120C /* AppDelegate.swift in Sources */,
 				BE759D5D24573A4700A6120C /* SceneDelegate.swift in Sources */,
 			);

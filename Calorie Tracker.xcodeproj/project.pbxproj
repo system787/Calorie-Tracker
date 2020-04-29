@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE6D974624595D5B00E72748 /* MealMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D974524595D5B00E72748 /* MealMO.swift */; };
+		BE6D9748245961D700E72748 /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D9747245961D700E72748 /* DayTableViewCell.swift */; };
+		BE6D974A2459D09200E72748 /* LogMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D97492459D09200E72748 /* LogMO.swift */; };
 		BE759D5B24573A4700A6120C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE759D5A24573A4700A6120C /* AppDelegate.swift */; };
 		BE759D5D24573A4700A6120C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE759D5C24573A4700A6120C /* SceneDelegate.swift */; };
-		BE759D6224573A4700A6120C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE759D6024573A4700A6120C /* Main.storyboard */; };
 		BE759D6424573A4900A6120C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE759D6324573A4900A6120C /* Assets.xcassets */; };
 		BE759D6724573A4900A6120C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE759D6524573A4900A6120C /* LaunchScreen.storyboard */; };
 		BE759D7224573A4900A6120C /* Calorie_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE759D7124573A4900A6120C /* Calorie_TrackerTests.swift */; };
 		BE759D7D24573A4900A6120C /* Calorie_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE759D7C24573A4900A6120C /* Calorie_TrackerUITests.swift */; };
-		BE759D8F2457407E00A6120C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE759D8E2457407E00A6120C /* Meal.swift */; };
+		BEEADB65245789C500958F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEADB64245789C500958F56 /* Main.storyboard */; };
+		BEEADB6A24578DEC00958F56 /* CalorieTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEEADB6824578DEC00958F56 /* CalorieTracker.xcdatamodeld */; };
+		BEEADB6C2459287F00958F56 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEADB6B2459287F00958F56 /* DayViewController.swift */; };
+		BEEADBAD245931F000958F56 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEADBAC245931F000958F56 /* UserSettings.swift */; };
+		BEEADBB224595A6C00958F56 /* MealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEADB6624578A1B00958F56 /* MealController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE6D974524595D5B00E72748 /* MealMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMO.swift; sourceTree = "<group>"; };
+		BE6D9747245961D700E72748 /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
+		BE6D97492459D09200E72748 /* LogMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMO.swift; sourceTree = "<group>"; };
 		BE759D5724573A4700A6120C /* Calorie Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calorie Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE759D5A24573A4700A6120C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE759D5C24573A4700A6120C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE759D6124573A4700A6120C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE759D6324573A4900A6120C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE759D6624573A4900A6120C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE759D6824573A4900A6120C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,7 +56,11 @@
 		BE759D7824573A4900A6120C /* Calorie TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calorie TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE759D7C24573A4900A6120C /* Calorie_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calorie_TrackerUITests.swift; sourceTree = "<group>"; };
 		BE759D7E24573A4900A6120C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE759D8E2457407E00A6120C /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		BEEADB64245789C500958F56 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BEEADB6624578A1B00958F56 /* MealController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealController.swift; sourceTree = "<group>"; };
+		BEEADB6924578DEC00958F56 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BEEADB6B2459287F00958F56 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		BEEADBAC245931F000958F56 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,10 @@
 		BE759D5924573A4700A6120C /* Calorie Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BEEADB6824578DEC00958F56 /* CalorieTracker.xcdatamodeld */,
 				BE759D8D2457404A00A6120C /* presentation */,
 				BE759D8C2457404400A6120C /* data */,
-				BE759D8B2457403500A6120C /* domain */,
+				BE759D8B2457403500A6120C /* controller */,
 				BE759D8A2457402E00A6120C /* res */,
 				BE759D5A24573A4700A6120C /* AppDelegate.swift */,
 				BE759D5C24573A4700A6120C /* SceneDelegate.swift */,
@@ -133,21 +146,25 @@
 		BE759D8A2457402E00A6120C /* res */ = {
 			isa = PBXGroup;
 			children = (
+				BEEADBAC245931F000958F56 /* UserSettings.swift */,
 			);
 			path = res;
 			sourceTree = "<group>";
 		};
-		BE759D8B2457403500A6120C /* domain */ = {
+		BE759D8B2457403500A6120C /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				BEEADB6624578A1B00958F56 /* MealController.swift */,
+				BEEADB6B2459287F00958F56 /* DayViewController.swift */,
 			);
-			path = domain;
+			path = controller;
 			sourceTree = "<group>";
 		};
 		BE759D8C2457404400A6120C /* data */ = {
 			isa = PBXGroup;
 			children = (
-				BE759D8E2457407E00A6120C /* Meal.swift */,
+				BE6D974524595D5B00E72748 /* MealMO.swift */,
+				BE6D97492459D09200E72748 /* LogMO.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -155,7 +172,8 @@
 		BE759D8D2457404A00A6120C /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				BE759D6024573A4700A6120C /* Main.storyboard */,
+				BEEADB64245789C500958F56 /* Main.storyboard */,
+				BE6D9747245961D700E72748 /* DayTableViewCell.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -264,9 +282,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEADB65245789C500958F56 /* Main.storyboard in Resources */,
 				BE759D6724573A4900A6120C /* LaunchScreen.storyboard in Resources */,
 				BE759D6424573A4900A6120C /* Assets.xcassets in Resources */,
-				BE759D6224573A4700A6120C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,9 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE759D8F2457407E00A6120C /* Meal.swift in Sources */,
+				BEEADB6C2459287F00958F56 /* DayViewController.swift in Sources */,
 				BE759D5B24573A4700A6120C /* AppDelegate.swift in Sources */,
+				BE6D9748245961D700E72748 /* DayTableViewCell.swift in Sources */,
+				BEEADB6A24578DEC00958F56 /* CalorieTracker.xcdatamodeld in Sources */,
+				BEEADBB224595A6C00958F56 /* MealController.swift in Sources */,
+				BEEADBAD245931F000958F56 /* UserSettings.swift in Sources */,
+				BE6D974624595D5B00E72748 /* MealMO.swift in Sources */,
 				BE759D5D24573A4700A6120C /* SceneDelegate.swift in Sources */,
+				BE6D974A2459D09200E72748 /* LogMO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BE759D6024573A4700A6120C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE759D6124573A4700A6120C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BE759D6524573A4900A6120C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -616,6 +632,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BEEADB6824578DEC00958F56 /* CalorieTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BEEADB6924578DEC00958F56 /* Model.xcdatamodel */,
+			);
+			currentVersion = BEEADB6924578DEC00958F56 /* Model.xcdatamodel */;
+			path = CalorieTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BE759D4F24573A4700A6120C /* Project object */;
 }

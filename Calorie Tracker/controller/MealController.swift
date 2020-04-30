@@ -7,56 +7,117 @@
 //
 
 import UIKit
-import CoreData
+import os.log
 
-class MealController: NSObject {
+class MealController {
+    var meals: [Meal] = [Meal]()
+    var todayMeals: [Meal] = [Meal]()
     
-    // MARK: - Core Data stack
-    var managedObjectContext: NSManagedObjectContext
-    
-    // MARK: Instance constants
-    
-    // MARK: Member Variables
-    var mealList: [Meal] = [Meal]()
-    
-    // MARK: Initialization
-    init(completionClosure: @escaping() -> ()) {
-        // This resource is the same name as your xcdatamodeld contained in your project
-        guard let modelURL = Bundle.main.url(forResource: "CalorieTracker", withExtension: "momd") else {
-            fatalError("Error loading model from bundle")
-        }
-        // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
-        guard let mom = NSManagedObjectModel(contentsOf: modelURL) else {
-            fatalError("Error initializing mom from: \(modelURL)")
-        }
+    var mealURL: URL? {
+        let fileManager = FileManager.default
+        let documentDir = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
+        let url = documentDir?.appendingPathComponent("meals.plist")
         
-        let psc = NSPersistentStoreCoordinator(managedObjectModel: mom)
-        
-        managedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = psc
-        
-        let queue = DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
-        queue.async {
-            guard let docURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last else {
-                fatalError("Unable to resolve document directory")
-            }
-            let storeURL = docURL.appendingPathComponent("CalorieTracker.sqlite")
-            do {
-                try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
-                // The callback block is expected to complete the User Interface and therefore should be presented back on the main queue so that the user interface does not need to be concerned with which queue this call is coming from.
-                
-                DispatchQueue.main.sync(execute: completionClosure)
-            } catch {
-                fatalError("Error migrating store: \(error)")
-            }
-        }
+        return url
     }
     
-    // MARK: Public Functions
-    func initFromCoreData() {
+    var todayURL: URL? {
+        let fileManager = FileManager.default
+        let documentDir = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
+        let url = documentDir?.appendingPathComponent("today.plist")
+        
+        return url
+    }
+    
+    init() {
         
     }
     
-    // MARK: Private Functions
+    func createToday(_ name: String, _ calories: Int, _ image: UIImage) {
+        let meal = Meal(name, calories, image)
+        todayMeals.append(meal)
+        
+        saveToPersistentStore(url: todayURL)
+    }
     
+    func deleteFromToday(_ meal: Meal) {
+        if let index = todayMeals.firstIndex(of: meal) {
+            todayMeals.remove(at: index)
+        }
+        saveToPersistentStore(url: todayURL)
+    }
+    
+    func moveToHistory(_ meal: Meal) {
+        deleteFromToday(meal)
+        meals.append(meal)
+        
+        saveToPersistentStore(url: todayURL)
+        saveToPersistentStore(url: mealURL)
+    }
+    
+    func deleteFromHistory(_ meal: Meal) {
+        
+    }
+    
+    func saveToPersistentStore(url: URL?) {
+        os_log("saveToPersistentStore() called with url %@", log: OSLog.default, type: .debug, String(url?.absoluteString ?? "No url available"))
+        
+        let encoder = PropertyListEncoder()
+        
+        guard let unwrappedURL = url else {
+            os_log("Unable to get URL to persistent store for writing", log: OSLog.default, type: .error)
+            
+            return
+        }
+        
+        do {
+            var encodedMeals: Data
+            
+            if unwrappedURL == mealURL {
+                try encodedMeals = encoder.encode(meals)
+            } else {
+                try encodedMeals = encoder.encode(todayMeals)
+            }
+            
+            try encodedMeals.write(to: unwrappedURL)
+            
+            os_log("Successfully encoded meals to persistent store", log: OSLog.default, type: .debug)
+        } catch {
+            os_log("Unsuccessful in encoding meals to write into persistent store", log: OSLog.default, type: .error)
+            return
+        }
+        
+        loadFromPersistentStore(url: unwrappedURL)
+    }
+    
+    func loadFromPersistentStore(url: URL?) {
+        os_log("loadFromPersistentStore() called with url %@", log: OSLog.default, type: .debug, String(url?.absoluteString ?? "No url available"))
+        
+        let decoder = PropertyListDecoder()
+        
+        guard let unwrappedURL = url else {
+            os_log("Unable to get URL to persistent store for reading", log: OSLog.default, type: .error)
+            
+            return
+        }
+        
+        do {
+            var data: Data
+            
+            try data = Data.init(contentsOf: unwrappedURL)
+            
+            if unwrappedURL == mealURL {
+                try meals = decoder.decode([Meal].self, from: data)
+            } else {
+                try todayMeals = decoder.decode([Meal].self, from: data)
+            }
+            
+            
+            os_log("Successfully decoded meals saved in persistent store", log: OSLog.default, type: .debug)
+        } catch {
+            os_log("Unsuccessful in decoding meals saved in persistent store", log: OSLog.default, type: .error)
+            
+            return
+        }
+    }
 }

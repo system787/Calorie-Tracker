@@ -10,7 +10,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Meal" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="Log" positionX="-349.1328125" positionY="-23.58984375" width="128" height="73"/>
+        <element name="Meal" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

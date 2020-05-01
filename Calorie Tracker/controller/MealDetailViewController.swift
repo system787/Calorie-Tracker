@@ -14,7 +14,7 @@ protocol AddMealViewControllerDelegate {
     func mealWasAdded(_ meal: Meal)
 }
 
-class AddMealViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class MealDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet var mealNameTextField: UITextField!
     @IBOutlet var caloriesTextField: UITextField!
     @IBOutlet var mealImageView: UIImageView!

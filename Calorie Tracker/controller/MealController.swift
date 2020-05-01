@@ -59,7 +59,6 @@ class MealController {
         deleteFromToday(meal)
         meals.append(meal)
         
-        saveToPersistentStore(url: todayURL)
         saveToPersistentStore(url: mealURL)
     }
     
@@ -67,6 +66,22 @@ class MealController {
         if let index = meals.firstIndex(of: meal) {
             meals.remove(at: index)
         }
+        saveToPersistentStore(url: mealURL)
+    }
+    
+    func updateTodayMeal(_ oldMeal: Meal, _ newMeal: Meal) {
+        if let index = todayMeals.firstIndex(of: oldMeal) {
+            todayMeals[index] = newMeal
+        }
+        
+        saveToPersistentStore(url: todayURL)
+    }
+    
+    func updateHistoryMeal(_ oldMeal: Meal, _ newMeal: Meal) {
+        if let index = meals.firstIndex(of: oldMeal) {
+            meals[index] = newMeal
+        }
+        
         saveToPersistentStore(url: mealURL)
     }
     

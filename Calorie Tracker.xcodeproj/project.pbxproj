@@ -17,13 +17,15 @@
 		BEEADB65245789C500958F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEADB64245789C500958F56 /* Main.storyboard */; };
 		BEEADBAD245931F000958F56 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEADBAC245931F000958F56 /* UserSettings.swift */; };
 		BEEADBB224595A6C00958F56 /* MealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEADB6624578A1B00958F56 /* MealController.swift */; };
-		BEFBE509245AEA3D006CF97D /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE508245AEA3D006CF97D /* AddMealViewController.swift */; };
+		BEFBE509245AEA3D006CF97D /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE508245AEA3D006CF97D /* MealDetailViewController.swift */; };
 		BEFBE50B245AEA51006CF97D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE50A245AEA51006CF97D /* TodayViewController.swift */; };
 		BEFBE50D245AEA5F006CF97D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE50C245AEA5F006CF97D /* HistoryViewController.swift */; };
 		BEFBE50F245AEA6D006CF97D /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE50E245AEA6D006CF97D /* OptionsViewController.swift */; };
 		BEFBE513245AF365006CF97D /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE512245AF365006CF97D /* Meal.swift */; };
 		BEFBE515245B4A5A006CF97D /* TodayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE514245B4A5A006CF97D /* TodayViewCell.swift */; };
 		BEFBE517245B5287006CF97D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE516245B5287006CF97D /* HomeViewController.swift */; };
+		BEFBE519245B9536006CF97D /* HistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE518245B9536006CF97D /* HistoryViewCell.swift */; };
+		BEFBE51B245B9BFE006CF97D /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBE51A245B9BFE006CF97D /* HistoryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +62,15 @@
 		BEEADB64245789C500958F56 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BEEADB6624578A1B00958F56 /* MealController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealController.swift; sourceTree = "<group>"; };
 		BEEADBAC245931F000958F56 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		BEFBE508245AEA3D006CF97D /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
+		BEFBE508245AEA3D006CF97D /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		BEFBE50A245AEA51006CF97D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		BEFBE50C245AEA5F006CF97D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		BEFBE50E245AEA6D006CF97D /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		BEFBE512245AF365006CF97D /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		BEFBE514245B4A5A006CF97D /* TodayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewCell.swift; sourceTree = "<group>"; };
 		BEFBE516245B5287006CF97D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BEFBE518245B9536006CF97D /* HistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewCell.swift; sourceTree = "<group>"; };
+		BEFBE51A245B9BFE006CF97D /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,11 +164,12 @@
 			isa = PBXGroup;
 			children = (
 				BEEADB6624578A1B00958F56 /* MealController.swift */,
-				BEFBE508245AEA3D006CF97D /* AddMealViewController.swift */,
-				BEFBE50A245AEA51006CF97D /* TodayViewController.swift */,
-				BEFBE50C245AEA5F006CF97D /* HistoryViewController.swift */,
-				BEFBE50E245AEA6D006CF97D /* OptionsViewController.swift */,
 				BEFBE516245B5287006CF97D /* HomeViewController.swift */,
+				BEFBE50A245AEA51006CF97D /* TodayViewController.swift */,
+				BEFBE508245AEA3D006CF97D /* MealDetailViewController.swift */,
+				BEFBE50C245AEA5F006CF97D /* HistoryViewController.swift */,
+				BEFBE51A245B9BFE006CF97D /* HistoryDetailViewController.swift */,
+				BEFBE50E245AEA6D006CF97D /* OptionsViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				BEEADB64245789C500958F56 /* Main.storyboard */,
 				BE7C7274245A856700E066F7 /* RoundButtons.swift */,
 				BEFBE514245B4A5A006CF97D /* TodayViewCell.swift */,
+				BEFBE518245B9536006CF97D /* HistoryViewCell.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFBE519245B9536006CF97D /* HistoryViewCell.swift in Sources */,
 				BE759D5B24573A4700A6120C /* AppDelegate.swift in Sources */,
 				BEEADBB224595A6C00958F56 /* MealController.swift in Sources */,
 				BEFBE515245B4A5A006CF97D /* TodayViewCell.swift in Sources */,
@@ -326,9 +333,10 @@
 				BEFBE513245AF365006CF97D /* Meal.swift in Sources */,
 				BE759D5D24573A4700A6120C /* SceneDelegate.swift in Sources */,
 				BEFBE50F245AEA6D006CF97D /* OptionsViewController.swift in Sources */,
-				BEFBE509245AEA3D006CF97D /* AddMealViewController.swift in Sources */,
+				BEFBE509245AEA3D006CF97D /* MealDetailViewController.swift in Sources */,
 				BE7C7275245A856700E066F7 /* RoundButtons.swift in Sources */,
 				BEFBE517245B5287006CF97D /* HomeViewController.swift in Sources */,
+				BEFBE51B245B9BFE006CF97D /* HistoryDetailViewController.swift in Sources */,
 				BEFBE50B245AEA51006CF97D /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
